@@ -28,13 +28,10 @@ public class Application {
         }
 
         // 3. 당첨 번호 입력
-        WinningNumbersInput winninginput = new WinningNumbersInput();
-
         System.out.println("당첨 번호를 입력해 주세요.");
-        String InputWinningNumbers = readLine();
-        List numbers = winninginput.inputIntoList(InputWinningNumbers);
+        String inputWinningNumbers = readLine();
+        List winningNumbers = Lotto.inputIntoList(inputWinningNumbers);
 
-        Lotto winningNumbers = new Lotto(numbers);
-        winningNumbers.print(numbers); // 삭제 예정
+        Lotto.print(winningNumbers); // 삭제 예정
     }
 }
