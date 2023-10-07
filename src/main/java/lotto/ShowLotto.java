@@ -19,7 +19,7 @@ public class ShowLotto {
 
     public List randomLotto(int number) {
         List<List<Integer>> lottoList = new ArrayList<>();
-        for (int i = 0; i < number; i++) { // 확인용 삭제 예정
+        for (int i = 0; i < number; i++) {
             List<Integer> numbers = Randoms.pickUniqueNumbersInRange(1, 45, 6);
             lottoList.add(numbers);
         }
