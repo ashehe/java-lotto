@@ -42,7 +42,7 @@ public class Application {
 
         // 5-1. 당첨 내역 출력
         List<String> winningCount = new ArrayList<>(); // 장별 번호 일치 개수 리스트
-        for (int i = 0; i < number; i++) { // 메서드로 분리 수정 필요(삭제)
+        for (int i = 0; i < number; i++) { // 메서드로 분리 수정 필요 (삭제)
             int count = 0;
             boolean bonus = false;
             for (int j = 0; j < 6; j++) {
