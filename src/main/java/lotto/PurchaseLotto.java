@@ -9,7 +9,7 @@ public class PurchaseLotto {
         this.money = money;
     }
 
-    public boolean isMoneyValid(int money) {
+    public static boolean isMoneyValid(int money) {
         try {
             if (money % 1000 != 0) {
                 throw new IllegalArgumentException("[ERROR] 1,000원 단위로 입력해주세요.");
