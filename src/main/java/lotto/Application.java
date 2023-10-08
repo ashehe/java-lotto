@@ -29,7 +29,6 @@ public class Application {
         System.out.println("당첨 번호를 입력해 주세요.");
         String inputWinningNumbers = readLine();
         List<Integer> winningNumbers = Lotto.inputIntoList(inputWinningNumbers);
-
         Lotto.print(winningNumbers); // 확인용 - 삭제 예정
 
         // 4. 보너스 번호 입력
@@ -93,5 +92,17 @@ public class Application {
         System.out.println("5개 일치 (1,500,000원) - " + five + "개");
         System.out.println("5개 일치, 보너스 볼 일치 (30,000,000원) - " + five_bonus + "개");
         System.out.println("6개 일치 (2,000,000,000원) - " + six + "개");
+
+        // 5-2. 수익률 출력
+        int earning = 0;
+        earning += 5000 * three;
+        earning += 50000 * four;
+        earning += 1500000 * five;
+        earning += 30000000 * five_bonus;
+        earning += 2000000000 * six;
+
+        double profit = (double) earning / money * 100;
+        double profitRate = Math.round(profit * 10.0) / 10.0;
+        System.out.println("총 수익률은 " + profitRate + "%입니다.");
     }
 }
